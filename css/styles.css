@@ -23,8 +23,16 @@ bcg-color-footer- 2F303A
 	--bcg-color-header: #ffffff;
 
 	--contacts-list-color: rgba(255, 255, 255, 0.6);
+	--background-our-team: #f5f4fa;
 }
 
+body {
+	font-family: "Roboto", sans-serif;
+	letter-spacing: 0.03em;
+
+	color: var(--primary-text-color);
+	background-color: #ffffff;
+}
 h1,
 h2,
 h3,
@@ -37,16 +45,9 @@ ul {
 	padding: 0;
 }
 
-img {
+img,
+a {
 	display: block;
-}
-
-body {
-	font-family: "Roboto", sans-serif;
-	letter-spacing: 0.03em;
-
-	color: var(--primary-text-color);
-	background-color: #ffffff;
 }
 
 .list,
@@ -65,16 +66,19 @@ body {
 	background-color: var(--bcg-color-header);
 }
 
+.container {
+	/* outline: 4px solid red; */
+
+	width: 1200px;
+	padding: 0 15px;
+
+	margin: 0 auto;
+}
+
 .header .container {
 	align-items: center;
 	display: flex;
-	outline: 4px solid tomato;
-	margin-left: auto;
-	margin-right: auto;
-
-	padding-left: 15px;
-	padding-right: 15px;
-	width: 1170px;
+	/* outline: 4px solid tomato; */
 }
 
 .web {
@@ -106,7 +110,7 @@ body {
 	display: block;
 	text-decoration: none;
 	margin-right: 90px;
-	padding-top: 24px;
+	padding-top: 25px;
 	padding-bottom: 25px;
 }
 
@@ -133,7 +137,6 @@ margin-right: 0;
 
 .nav .link {
 	text-decoration: none;
-	display: block;
 
 	padding: 32px 0;
 	font-weight: 500;
@@ -182,18 +185,15 @@ margin-right: 0;
 	background-color: var(--bcg-color-footer);
 }
 .section-hero .container {
-	margin-right: auto;
-	margin-bottom: 94px;
-	margin-left: auto;
-	padding-top: 200px;
-	padding-right: 15px;
-	padding-bottom: 280px;
-	padding-left: 15px;
-	width: 1600px;
-
 	text-align: center;
 
-	outline: 4px solid tomato;
+	margin-bottom: 94px;
+
+	padding-top: 200px;
+	padding-bottom: 280px;
+	width: 1600px;
+
+	/* outline: 4px solid tomato; */
 	color: var(--title-h1-color);
 }
 
@@ -214,11 +214,11 @@ margin-right: 0;
 	font-family: inherit;
 	font-weight: 700;
 	line-height: 1.9;
-	border-radius: 4px;
 	padding: 10px 32px;
 
 	color: var(--title-h1-color);
 	background-color: var(--accent-color-background);
+	border-radius: 4px;
 	border-width: 0;
 	box-shadow: 0px 4px 4px rgb(0 0 0 / 15%);
 }
@@ -233,20 +233,16 @@ margin-right: 0;
 	background-color: var(--bcg-color-header);
 }
 
-.section-features .visually-hidden {
+.visually-hidden {
 	color: blue;
 	visibility: hidden;
+	text-align: center;
 }
 
 .section-features .container {
-	outline: 4px solid tomato;
-	margin-right: auto;
-	margin-bottom: 94px;
-	margin-left: auto;
+	/* outline: 4px solid tomato; */
 
-	padding-right: 15px;
-	padding-left: 15px;
-	width: 1170px;
+	margin-bottom: 94px;
 }
 
 .section-features .list {
@@ -278,12 +274,7 @@ margin-right: 0;
 
 /* <!--Speciality--> */
 .section-special .container {
-	outline: 4px solid tomato;
-	width: 1170px;
-	margin-left: auto;
-	margin-right: auto;
-	/* padding-left: 15px;
-	padding-right: 15px; */
+	margin-bottom: 94px;
 }
 
 .section-special .title {
@@ -300,8 +291,8 @@ margin-right: 0;
 }
 
 .section-special .list {
-	margin-bottom: 94px;
 	display: flex;
+	/* margin-bottom: 94px; */
 }
 
 .section-special .item:not(:last-child) {
@@ -309,10 +300,11 @@ margin-right: 0;
 }
 
 /* <!--Our Team--> */
+.section-team {
+	background-color: var(--background-our-team);
+}
 .section-team .container {
-	outline: 4px solid tomato;
-	margin-left: auto;
-	margin-right: auto;
+	/* outline: 4px solid tomato; */
 	width: 1600px;
 }
 
@@ -320,6 +312,7 @@ margin-right: 0;
 	text-align: center;
 
 	margin-bottom: 50px;
+	padding-top: 94px;
 
 	font-family: "Roboto";
 	font-weight: 700;
@@ -332,21 +325,26 @@ margin-right: 0;
 
 .section-team .list {
 	display: flex;
+	justify-content: center;
+	padding-bottom: 94px;
+}
+.section-team .item {
+	box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+	border-radius: 0px 0px 4px 4px;
 }
 
 .section-team .item:not(:last-child) {
 	margin-right: 30px;
 }
 
-.section-team .item:first-child {
-	padding-left: 215px;
-}
-
-.section-team .item:last-child {
-	padding-right: 215px;
+.section-team .photo {
+	margin-bottom: 30px;
 }
 
 .section-team .name {
+	text-align: center;
+	margin-bottom: 10px;
+
 	font-weight: 500;
 	line-height: 1.2;
 
@@ -354,6 +352,9 @@ margin-right: 0;
 }
 
 .section-team .text {
+	text-align: center;
+	margin-bottom: 30px;
+
 	line-height: 1.2;
 
 	color: var(--primary-text-color);
@@ -364,16 +365,6 @@ margin-right: 0;
 	padding-bottom: 60px;
 
 	background-color: var(--bcg-color-footer);
-}
-
-.footer .container {
-	outline: 4px solid tomato;
-	margin-left: auto;
-	margin-right: auto;
-	padding-left: 15px;
-	padding-right: 15px;
-
-	width: 1170px;
 }
 
 .footer .logo {
@@ -414,26 +405,33 @@ margin-right: 0;
 /* =======================================
 			   portfolio
 ======================================= */
+
+.section-gallery {
+	padding: 94px 0px;
+}
+
+.btn-list {
+	display: flex;
+	justify-content: center;
+	margin-bottom: 34px;
+}
+
 .btn {
 	cursor: pointer;
 	font-family: inherit;
 
-	border-radius: 4px;
 	font-weight: 500;
 	line-height: 1.65;
 	padding: 6px 22px;
 
 	color: var(--title-text-color);
 	background: var(--accent-btn);
+	border-radius: 4px;
+	border-width: 0;
 }
 
-.btn:hover,
-.btn:focus {
-	font-weight: 500;
-	line-height: 1.65;
-
-	background-color: var(--accent-color-background);
-	color: var(--title-h1-color);
+.btn-list .item:not(:last-child) {
+	margin-right: 8px;
 }
 
 .btn-list .title {
@@ -444,7 +442,40 @@ margin-right: 0;
 	color: var(--title-text-color);
 }
 
+.btn:hover,
+.btn:focus {
+	font-weight: 500;
+	line-height: 1.65;
+
+	background-color: var(--accent-color-background);
+	color: var(--title-h1-color);
+	box-shadow: 0px 4px 4px rgb(0 0 0 / 15%);
+}
+
+.portfolio-list {
+	display: flex;
+	flex-wrap: wrap;
+	/* background-color: teal; */
+}
+
+.portfolio-list .item {
+	margin-right: 30px;
+	margin-bottom: 30px;
+	outline: 1px solid #eeeeee;
+}
+
+.portfolio-list .item:nth-child(3n) {
+	margin-right: 0;
+}
+
+.portfolio-list .photo {
+	margin-bottom: 20px;
+}
+
 .portfolio-list .title {
+	margin-bottom: 4px;
+	padding-right: 24px;
+	padding-left: 24px;
 	font-weight: 700;
 	font-size: 18px;
 	line-height: 2;
@@ -455,6 +486,8 @@ margin-right: 0;
 
 .portfolio-list .text {
 	line-height: 1.86;
-
+	margin-bottom: 20px;
+	padding-right: 24px;
+	padding-left: 24px;
 	color: var(--primary-text-color);
 }
